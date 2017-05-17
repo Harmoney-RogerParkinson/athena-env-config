@@ -18,3 +18,8 @@ zuul:
       serviceId: CUSTOMER-SERVICE
     static:
       path: /static/**
+    oauth2:
+      path: /uaa/**
+      serviceId: oauth2
+      stripPrefix: false
+

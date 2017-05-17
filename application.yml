@@ -10,6 +10,16 @@ eureka:
       enabled: true
     lease:
       duration: 5
+      
+spring:
+  oauth2:
+    resource:
+#      loadBalanced: true
+      userInfoUri: https://localhost:9443/oauth2/userinfo?schema=openid
+      wso2SessionTerminateUrl: https://localhost:9443/commonauth?commonAuthLogout=true&type=oid&commonAuthCallerPath=http://localhost:8080/logout&relyingParty=localhost    
+  resources:
+    chain:
+      enabled: true
 
 #spring:
 #  rabbitmq:
