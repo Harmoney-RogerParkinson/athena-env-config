@@ -1,16 +1,11 @@
 
-spring:
-  cloud:
-    config:
-      uri: http://config-server:8888
-
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
   client:
     serviceUrl:
-      defaultZone: http://eureka-server:8761/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
     healthcheck:
       enabled: true
     lease:
@@ -20,8 +15,8 @@ spring:
   oauth2:
     resource:
 #      loadBalanced: true
-      userInfoUri: https://auth-server:9443/oauth2/userinfo?schema=openid
-      wso2SessionTerminateUrl: https://auth-server:9443/commonauth?commonAuthLogout=true&type=oid&commonAuthCallerPath=http://localhost:8080/logout&relyingParty=localhost    
+      userInfoUri: https://localhost:9443/oauth2/userinfo?schema=openid
+      wso2SessionTerminateUrl: https://localhost:9443/commonauth?commonAuthLogout=true&type=oid&commonAuthCallerPath=http://localhost:8080/logout&relyingParty=localhost    
   resources:
     chain:
       enabled: true
