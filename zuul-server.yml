@@ -23,3 +23,15 @@ zuul:
       serviceId: oauth2
       stripPrefix: false
 
+security:
+  user:
+    password: password
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:9443/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9443/uaa/oauth/authorize
+      clientId: acme
+      clientSecret: acmesecret
+    resource:
+      userInfoUri: http://localhost:9443/uaa/user
+wso2SessionTerminateUrl: https://localhost:9443/commonauth?commonAuthLogout=true&type=oid&commonAuthCallerPath=http://localhost:8080/logout&relyingParty=localhost
