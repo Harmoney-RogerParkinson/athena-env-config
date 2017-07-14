@@ -4,16 +4,7 @@ server:
 eureka:
   server:
     enableSelfPreservation: false
-  instance:
-    leaseRenewalIntervalInSeconds: 1
-    leaseExpirationDurationInSeconds: 2
   client:
     registerWithEureka: false
     fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://eureka-server:8761/eureka/
-    healthcheck:
-      enabled: true
-    lease:
-      duration: 5
     
