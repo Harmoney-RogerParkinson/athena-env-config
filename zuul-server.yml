@@ -1,8 +1,3 @@
-#
-# THIS IS A PLACEHOLDER FILE
-# Current Zuul does not use centralised config
-# so changes to this file do nothing. Use the application.yml file in the project
-
 server:
   port: 9090
 
@@ -28,6 +23,19 @@ zuul:
       serviceId: oauth2
       stripPrefix: false
 
+spring:
+  aop:
+    proxy-target-class: true
+      
+  
+# Make sure the OAuth2 token is only relayed when using the internal API,
+# do not pass any authentication to the external API
+proxy:
+  auth:
+    routes:
+      internalApi: oauth2
+      externalApi: none
+      
 security:
   user:
     password: password
