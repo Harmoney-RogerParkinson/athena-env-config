@@ -20,7 +20,18 @@ spring:
   resources:
     chain:
       enabled: true
+  rabbitmq:
+      port: 5673
+      host: 'rabbit-server'
+      username: guest
+      password: guest
+      listener:
+        max-concurrency: 1
+        prefetch: 1
+        acknowledge-mode: auto
+        auto-startup: true
 
+dynamic: true
 #spring:
 #  rabbitmq:
 #    host: localhost
