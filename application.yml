@@ -23,9 +23,9 @@ spring:
 #dummy change
   rabbitmq:
       port: 5672
-      host: 'rabbitmq'
-      username: guest
-      password: guest
+      host: ec2-52-64-251-79.ap-southeast-2.compute.amazonaws.com
+      username: harmoney
+      password: harmoney
       listener:
         max-concurrency: 1
         prefetch: 1
