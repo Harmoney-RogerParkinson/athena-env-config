@@ -21,9 +21,8 @@ spring:
     chain:
       enabled: true
   rabbitmq:
-      addresses: rabbitmq:5672
-#      port: 5673
-#      host: 'rabbit-server'
+      port: 5672
+      host: 'rabbitmq'
       username: guest
       password: guest
       listener:
