@@ -20,6 +20,18 @@ spring:
   resources:
     chain:
       enabled: true
+  rabbitmq:
+      port: 5672
+      host: ec2-52-64-251-79.ap-southeast-2.compute.amazonaws.com
+      virtual-host: harmoney
+      username: harmoney
+      password: harmoney
+      listener:
+        max-concurrency: 1
+        prefetch: 1
+        acknowledge-mode: auto
+        auto-startup: true
+
 
 #spring:
 #  rabbitmq:
