@@ -20,6 +20,7 @@ spring:
   resources:
     chain:
       enabled: true
+#dummy change
   rabbitmq:
       port: 5672
       host: 'rabbitmq'
